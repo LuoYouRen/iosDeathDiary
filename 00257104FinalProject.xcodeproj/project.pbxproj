@@ -14,6 +14,9 @@
 		4C1D09621E20E32C00B23FB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C1D09601E20E32C00B23FB2 /* LaunchScreen.storyboard */; };
 		4C1D096D1E20E32C00B23FB2 /* _0257104FinalProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D096C1E20E32C00B23FB2 /* _0257104FinalProjectTests.swift */; };
 		4C1D09781E20E32C00B23FB2 /* _0257104FinalProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D09771E20E32C00B23FB2 /* _0257104FinalProjectUITests.swift */; };
+		4C1D09861E2119E000B23FB2 /* DiaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D09851E2119E000B23FB2 /* DiaryTableViewController.swift */; };
+		4C1D09881E2121C100B23FB2 /* DiaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D09871E2121C100B23FB2 /* DiaryTableViewCell.swift */; };
+		4C1D098A1E21345400B23FB2 /* DiaryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D09891E21345400B23FB2 /* DiaryDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		4C1D09731E20E32C00B23FB2 /* 00257104FinalProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 00257104FinalProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C1D09771E20E32C00B23FB2 /* _0257104FinalProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _0257104FinalProjectUITests.swift; sourceTree = "<group>"; };
 		4C1D09791E20E32C00B23FB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C1D09851E2119E000B23FB2 /* DiaryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryTableViewController.swift; sourceTree = "<group>"; };
+		4C1D09871E2121C100B23FB2 /* DiaryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryTableViewCell.swift; sourceTree = "<group>"; };
+		4C1D09891E21345400B23FB2 /* DiaryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,9 @@
 				4C1D095E1E20E32C00B23FB2 /* Assets.xcassets */,
 				4C1D09601E20E32C00B23FB2 /* LaunchScreen.storyboard */,
 				4C1D09631E20E32C00B23FB2 /* Info.plist */,
+				4C1D09851E2119E000B23FB2 /* DiaryTableViewController.swift */,
+				4C1D09871E2121C100B23FB2 /* DiaryTableViewCell.swift */,
+				4C1D09891E21345400B23FB2 /* DiaryDetailViewController.swift */,
 			);
 			path = 00257104FinalProject;
 			sourceTree = "<group>";
@@ -260,7 +269,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C1D095A1E20E32C00B23FB2 /* ViewController.swift in Sources */,
+				4C1D098A1E21345400B23FB2 /* DiaryDetailViewController.swift in Sources */,
+				4C1D09861E2119E000B23FB2 /* DiaryTableViewController.swift in Sources */,
 				4C1D09581E20E32C00B23FB2 /* AppDelegate.swift in Sources */,
+				4C1D09881E2121C100B23FB2 /* DiaryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
