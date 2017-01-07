@@ -149,7 +149,7 @@ class DiaryTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -159,13 +159,13 @@ class DiaryTableViewController: UITableViewController {
         if segue.identifier == "showDetail" {
             let indexPath = self.tableView.indexPathForSelectedRow
             let dic:[String:String]
-            dic = lovers[indexPath!.row]
+            dic = Diaries[indexPath!.row]
             
             
-            let controller = segue.destination as! LoverDetailViewController
-            controller.loverInfoDic = dic
+            let controller = segue.destination as! DiaryDetailViewController
+            controller.DiaryInfoDic = dic
+        }
+    
     }
-    */
-
 
 }

@@ -12,19 +12,46 @@ class DiaryDetailViewController: UIViewController {
 
     var DiaryInfoDic:[String:String]!
     
-    @IBOutlet weak var weightLabel: UILabel!
-    @IBOutlet weak var heightLabel: UILabel!
-    @IBOutlet weak var interestLabel: UILabel!
+
+    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var contextTextView: UITextView!
+    @IBOutlet weak var hatePrograssView: UIProgressView!
+    @IBOutlet weak var hateRateLabel: UILabel!
+
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "厭世標題"
+        datePicker.backgroundColor = UIColor.darkGray
         
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYYY-MM-DD"
+        //datePicker.setDate(dateFormatter.date(from: DiaryInfoDic["Date"]!)!, animated: true)
+        datePicker.setDate(dateFormatter.date(from: "2017-01-08")!, animated: false)
+        
+        contextTextView.text = "人生好難"//DiaryInfoDic["context"]!
+        
+        let hateRate:Float = 0.5//(DiaryInfoDic["hateRate"]! as NSString).floatValue
+        hatePrograssView.progress = hateRate
+        
+        hateRateLabel.text = "\(Int(hateRate*100))%"
+        print(hateRateLabel.text)
+        /*
+        //get image
+        let fileManager = FileManager.default
+        let docUrls =
+            fileManager.urls(for: .documentDirectory, in: .userDomainMask)
+        let docUrl = docUrls.first
+        let url = docUrl?.appendingPathComponent("\(DiaryInfoDic["title"]!).png")
+        
+        photoImageView.image = UIImage(contentsOfFile: url!.path)
+        */
         // Do any additional setup after loading the view.
         
-        weightLabel.text = DiaryInfoDic["weight"]!
-        heightLabel.text = DiaryInfoDic["height"]!
-        interestLabel.text = DiaryInfoDic["interest"]!
-        
-        self.navigationItem.title = DiaryInfoDic["name"]!
+       // self.navigationItem.title = DiaryInfoDic["name"]!
         
     }
 
