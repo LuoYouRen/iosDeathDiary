@@ -17,6 +17,7 @@
 		4C1D09861E2119E000B23FB2 /* DiaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D09851E2119E000B23FB2 /* DiaryTableViewController.swift */; };
 		4C1D09881E2121C100B23FB2 /* DiaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D09871E2121C100B23FB2 /* DiaryTableViewCell.swift */; };
 		4C1D098A1E21345400B23FB2 /* DiaryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D09891E21345400B23FB2 /* DiaryDetailViewController.swift */; };
+		4C1D098C1E216DBF00B23FB2 /* WriteDiaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D098B1E216DBF00B23FB2 /* WriteDiaryTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		4C1D09851E2119E000B23FB2 /* DiaryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryTableViewController.swift; sourceTree = "<group>"; };
 		4C1D09871E2121C100B23FB2 /* DiaryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryTableViewCell.swift; sourceTree = "<group>"; };
 		4C1D09891E21345400B23FB2 /* DiaryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryDetailViewController.swift; sourceTree = "<group>"; };
+		4C1D098B1E216DBF00B23FB2 /* WriteDiaryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteDiaryTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				4C1D09851E2119E000B23FB2 /* DiaryTableViewController.swift */,
 				4C1D09871E2121C100B23FB2 /* DiaryTableViewCell.swift */,
 				4C1D09891E21345400B23FB2 /* DiaryDetailViewController.swift */,
+				4C1D098B1E216DBF00B23FB2 /* WriteDiaryTableViewController.swift */,
 			);
 			path = 00257104FinalProject;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C1D095A1E20E32C00B23FB2 /* ViewController.swift in Sources */,
+				4C1D098C1E216DBF00B23FB2 /* WriteDiaryTableViewController.swift in Sources */,
 				4C1D098A1E21345400B23FB2 /* DiaryDetailViewController.swift in Sources */,
 				4C1D09861E2119E000B23FB2 /* DiaryTableViewController.swift in Sources */,
 				4C1D09581E20E32C00B23FB2 /* AppDelegate.swift in Sources */,
@@ -517,6 +521,7 @@
 				4C1D097E1E20E32C00B23FB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C1D097F1E20E32C00B23FB2 /* Build configuration list for PBXNativeTarget "00257104FinalProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +530,7 @@
 				4C1D09811E20E32C00B23FB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C1D09821E20E32C00B23FB2 /* Build configuration list for PBXNativeTarget "00257104FinalProjectUITests" */ = {
 			isa = XCConfigurationList;
@@ -533,6 +539,7 @@
 				4C1D09841E20E32C00B23FB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
