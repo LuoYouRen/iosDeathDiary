@@ -11,7 +11,6 @@ import UIKit
 class DiaryTableViewController: UITableViewController {
     
     var isAddDiary = false
-    
     var Diaries = [[String:String]]()
     
     func updateFile() {
@@ -20,9 +19,9 @@ class DiaryTableViewController: UITableViewController {
             fileManager.urls(for: .documentDirectory, in: .userDomainMask)
         let docUrl = docUrls.first
         let url = docUrl?.appendingPathComponent("Diaries.txt")
-        print("url \(url)")
+        //print("url \(url)")
         let result = (Diaries as NSArray).write(to: url!, atomically: true)
-        print("result \(result)")
+        //print("result \(result)")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -34,6 +33,7 @@ class DiaryTableViewController: UITableViewController {
             self.tableView.insertRows(at: [indexPath], with: .automatic)
             
         }
+        
     }
     
     func addDiaryNoti(noti:Notification) {
@@ -43,6 +43,14 @@ class DiaryTableViewController: UITableViewController {
         
         isAddDiary = true
         
+        
+    }
+    func editDiaryNoti(noti:Notification) {
+        let dic = noti.userInfo as! [String:String]
+        
+        Diaries[noti.object as! Int] = dic
+        updateFile()
+        self.tableView.reloadData()
         
     }
     
@@ -68,6 +76,8 @@ class DiaryTableViewController: UITableViewController {
         
         let notiName = Notification.Name("addDiary")
         NotificationCenter.default.addObserver(self, selector: #selector(DiaryTableViewController.addDiaryNoti(noti:)), name: notiName, object: nil)
+        let editNoti = Notification.Name("editDiaryTable")
+        NotificationCenter.default.addObserver(self, selector: #selector(DiaryTableViewController.editDiaryNoti(noti:)), name: editNoti, object: nil)
 
     }
 
@@ -100,14 +110,15 @@ class DiaryTableViewController: UITableViewController {
         let docUrl = docUrls.first
         let url = docUrl?.appendingPathComponent("\(dic["title"]!).png")
         // Configure the cell...
-
+ 
         cell.photoImageView.image = UIImage(contentsOfFile: url!.path)
         
         cell.titleLabel.text = dic["title"]
-        cell.hateLabel.text = "厭世指數："
-        cell.dateLabel.text = "日期: \(dic["date"])"
+        cell.hateLabel.text = "厭世指數:"
+        cell.dateLabel.text = "日期: ".appending(dic["date"]!)
+        print(dic["date"])
         cell.hateProgressView.progressTintColor = UIColor.red
-        cell.hateProgressView.progress = (dic["hateRare"]! as NSString).floatValue
+        cell.hateProgressView.progress = (dic["hateRate"]! as NSString).floatValue
         return cell
     }
  
@@ -130,8 +141,8 @@ class DiaryTableViewController: UITableViewController {
             
             
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
-
         }
+        
     }
 
     /*
@@ -164,6 +175,8 @@ class DiaryTableViewController: UITableViewController {
             
             let controller = segue.destination as! DiaryDetailViewController
             controller.DiaryInfoDic = dic
+            controller.index = indexPath!.row.hashValue
+            print(indexPath!.row.hashValue)
         }
     
     }
